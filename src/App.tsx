@@ -4,6 +4,7 @@ import NotFound from "./pages/notFound/index";
 import Header from "./components/header/index";
 import Footer from "./components/footer/index";
 
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -25,6 +26,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
+      
     </BrowserRouter>
   );
 };

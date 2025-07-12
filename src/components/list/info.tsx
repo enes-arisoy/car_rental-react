@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import type { Car } from "./../../types/index";
-import { SlCalender } from "react-icons/sl";
-import { PiTire } from "react-icons/pi";
-import { GiSteeringWheel } from "react-icons/gi";
+import { MdOutlineTimer } from "react-icons/md";
+import { GoGear  } from "react-icons/go";
+import { PiEngineBold } from "react-icons/pi";
 import { motion } from "framer-motion";
 
 interface Props {
@@ -12,15 +12,15 @@ interface Props {
 const Info: FC<Props> = ({ car }) => {
   const arr = [
     {
-      icon: <GiSteeringWheel />,
+      icon: <PiEngineBold />,
       text: car?.trany || "Unknown",
     },
     {
-      icon: <PiTire />,
+      icon: <GoGear />,
       text: car?.drive || "Unknown",
     },
     {
-      icon: <SlCalender />,
+      icon: <MdOutlineTimer />,
       text: car?.year || "Unknown",
     },
   ];
@@ -31,13 +31,13 @@ const Info: FC<Props> = ({ car }) => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: index * 0.2,
+        delay: index * 0.1,
       },
     }),
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-around">
       {arr.map((item, key) => (
         <motion.div
           variants={variants}
@@ -47,8 +47,8 @@ const Info: FC<Props> = ({ car }) => {
           whileInView="visible"
           className="flex flex-col items-center gap-1"
         >
-          <span className="text-[22px] text-[#5db3fa]">{item.icon}</span>
-          <p className="text-[12px] text-gray-500  text-center">{item.text}</p>
+          <span className="sm:text-[40px] text-3xl text-[#367dee]">{item.icon}</span>
+          <p className="sm:text-[17px] text-[14px] text-gray-500  text-center">{item.text}</p>
         </motion.div>
       ))}
     </div>

@@ -18,21 +18,21 @@ const Image: FC<Props> = ({ car }) => {
       </div>
 
       <div className="flex gap-3 ">
-        <div className="rounded flex-1 flex relative h-30 border border-white/20">
+        <div className="rounded-xl flex-1 flex relative h-30 border border-white/20">
           <img
             src={getImage(car, "01")}
             alt="modal-cars"
             className="object-contain mx-auto"
           />
         </div>
-        <div className="rounded flex-1 flex relative h-30 border border-white/20">
+        <div className="rounded-xl flex-1 flex relative h-30 border border-white/20">
           <img
             src={getImage(car, "21")}
             alt="modal-cars"
             className="object-contain mx-auto"
           />
         </div>
-        <div className="rounded flex-1 flex relative h-30 border border-white/20">
+        <div className="rounded-xl flex-1 flex relative h-30 border border-white/20">
           <img
             src={getImage(car, "09")}
             alt="modal-cars"
