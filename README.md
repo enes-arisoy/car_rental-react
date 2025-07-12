@@ -31,6 +31,18 @@ A modern, responsive, and dynamic **Car Rental Web Application** built with Reac
 
 ---
 
+## 🌐 Live Demo
+
+🔗 [car-rental-app.vercel.app](https://car-rental-app.vercel.app) 
+
+---
+
+## 📦 GitHub Repository
+
+📁 [https://bit.ly/4kyEYow]()
+
+---
+
 ## 📸 Preview
 
 ![Preview](car-rental.gif)
