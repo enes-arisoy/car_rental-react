@@ -28,7 +28,7 @@ const Hero: FC = () => {
           animate={{ translateY: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.8, type: "spring" }}
         >
-          <Button text="Arabaları Keşfet" designs="mt-12" />
+          <Button text="Arabaları Keşfet" designs="mt-10" />
         </motion.div>
       </div>
 

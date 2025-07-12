@@ -6,25 +6,30 @@ import { useSearchParams } from "react-router-dom";
 
 const SearchBar: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [make, setMake] = useState<string | null>(searchParams.get("make") || null);
-  const [model, setModel] = useState<string | null>(searchParams.get("model") || null);
+  const [make, setMake] = useState<string | null>(
+    searchParams.get("make") || null
+  );
+  const [model, setModel] = useState<string | null>(
+    searchParams.get("model") || null
+  );
 
   // useMemo ile component yeniden render edilmeden options oluşturuluyor
-  const options = useMemo(() => makes.map((make) => ({ value: make, label: make })), []);
+  const options = useMemo(
+    () => makes.map((make) => ({ value: make, label: make })),
+    []
+  );
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (make) {
       searchParams.set("make", make);
-    }
-    else {
+    } else {
       searchParams.delete("make");
     }
     if (model) {
       searchParams.set("model", model);
-    }
-    else {
+    } else {
       searchParams.delete("model");
     }
     setSearchParams(searchParams);
@@ -37,7 +42,7 @@ const SearchBar: FC = () => {
           <label className="text-white font-semibold mb-1 text-sm">Marka</label>
           <div className="w-full flex items-center">
             <ReactSelect
-            value={make ? { value: make, label: make } : null}
+              value={make ? { value: make, label: make } : null}
               options={options}
               placeholder="Marka seçiniz"
               isSearchable={true}
@@ -57,7 +62,7 @@ const SearchBar: FC = () => {
         <div className="w-full flex items-center">
           <div className="flex-1 relative">
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-2">
-              <img src="/public/model.svg" alt="" className="size-6 " />
+              <img src="model.png" alt="" className="size-10"/>
             </div>
             <input
               value={model || ""}
