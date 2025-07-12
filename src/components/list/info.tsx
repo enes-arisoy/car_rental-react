@@ -37,7 +37,7 @@ const Info: FC<Props> = ({ car }) => {
   };
 
   return (
-    <div className="flex justify-around">
+    <div className="flex justify-evenly gap-2">
       {arr.map((item, key) => (
         <motion.div
           variants={variants}
@@ -45,10 +45,10 @@ const Info: FC<Props> = ({ car }) => {
           custom={key}
           key={key}
           whileInView="visible"
-          className="flex flex-col items-center gap-1"
+          className="flex flex-col items-center"
         >
-          <span className="sm:text-[28px] text-3xl text-[#367deec4]">{item.icon}</span>
-          <p className="sm:text-[17px] text-[14px] text-blue-300  text-center">{item.text}</p>
+          <span className="text-3xl text-[#6fa0ef7f]">{item.icon}</span>
+          <p className=" text-[12px] text-grey-light text-center">{item.text}</p>
         </motion.div>
       ))}
     </div>

@@ -21,7 +21,7 @@ const Card: FC<Props> = ({ car }) => {
         <h2>
           {car.make} - {car.model}
         </h2>
-        <div className="flex mt-6 text-[19px]">
+        <div className="flex mt-6 text-[18px]">
           <span className="text-[32px]">{getPrice(car)}</span>
           <span className="font-semibold">₺</span>
           <span className="font-semibold self-end">/gün</span>
@@ -47,7 +47,7 @@ const Card: FC<Props> = ({ car }) => {
           >
             <Button
               text="Daha Fazla"
-              designs="w-full text-white mt-[0.5px]"
+              designs="w-full text-white"
               fn={() => setModelOpen(true)}
             />
           </motion.div>
