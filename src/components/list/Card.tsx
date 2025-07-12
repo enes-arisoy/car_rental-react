@@ -31,7 +31,7 @@ const Card: FC<Props> = ({ car }) => {
           <img
             src={getImage(car, "23")}
             alt="card-car-photo"
-            className="w-full h-full object-contain min-h-[200px]"
+            className="w-full object-contain min-h-[200px]"
           />
         </div>
 
