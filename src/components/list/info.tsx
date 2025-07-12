@@ -47,8 +47,8 @@ const Info: FC<Props> = ({ car }) => {
           whileInView="visible"
           className="flex flex-col items-center gap-1"
         >
-          <span className="sm:text-[40px] text-3xl text-[#367dee]">{item.icon}</span>
-          <p className="sm:text-[17px] text-[14px] text-gray-500  text-center">{item.text}</p>
+          <span className="sm:text-[28px] text-3xl text-[#367deec4]">{item.icon}</span>
+          <p className="sm:text-[17px] text-[14px] text-blue-300  text-center">{item.text}</p>
         </motion.div>
       ))}
     </div>
