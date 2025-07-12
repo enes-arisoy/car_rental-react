@@ -68,7 +68,7 @@ const SearchBar: FC = () => {
               value={model || ""}
               type="text"
               placeholder="Model yazınız"
-              className="searchbar-input w-full capitalize"
+              className="searchbar-input w-full"
               onChange={(e) => setModel(e.target.value)}
             />
           </div>
