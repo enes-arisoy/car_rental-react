@@ -39,12 +39,18 @@ const SearchBar: FC = () => {
     <form onSubmit={handleSubmit} className="searchbar flex gap-4 items-end">
       <div className="searchbar-item items-end">
         <div className="w-full flex flex-col gap-2">
-          <label htmlFor="marka" className="text-white font-semibold mb-1 text-sm">Marka</label>
+          <label
+            htmlFor="marka"
+            className="text-white font-semibold mb-1 text-sm"
+          >
+            Marka
+          </label>
           <div className="w-full flex items-center">
             <ReactSelect
               value={make ? { value: make, label: make } : null}
               options={options}
-              id="marka"
+              inputId="marka"
+              aria-labelledby="marka-label"
               placeholder="Marka seçiniz"
               isSearchable={true}
               className="w-full min-w-[200px] z-20"
@@ -59,11 +65,16 @@ const SearchBar: FC = () => {
       </div>
 
       <div className="searchbar-item items-start flex flex-col">
-        <label htmlFor="input" className="text-white font-semibold mb-3 text-sm">Model</label>
+        <label
+          htmlFor="input"
+          className="text-white font-semibold mb-3 text-sm"
+        >
+          Model
+        </label>
         <div className="w-full flex items-center">
           <div className="flex-1 relative">
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-2">
-              <img src="model.png" alt="car-model-png" className="size-10"/>
+              <img src="model.png" alt="car-model-png" className="size-10" />
             </div>
             <input
               value={model || ""}
@@ -76,7 +87,11 @@ const SearchBar: FC = () => {
             />
           </div>
           <button className="ml-2   p-2 glass-effect rounded-xl hover:bg-white/20 transition-all duration-300  hover:scale-105 cursor-pointer">
-            <img src="search.svg" alt="model-search-button" className="size-6" />
+            <img
+              src="search.svg"
+              alt="model-search-button"
+              className="size-6"
+            />
           </button>
         </div>
       </div>
