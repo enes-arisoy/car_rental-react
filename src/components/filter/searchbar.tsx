@@ -39,12 +39,12 @@ const SearchBar: FC = () => {
     <form onSubmit={handleSubmit} className="searchbar flex gap-4 items-end">
       <div className="searchbar-item items-end">
         <div className="w-full flex flex-col gap-2">
-          <label htmlFor="make" className="text-white font-semibold mb-1 text-sm">Marka</label>
+          <label htmlFor="marka" className="text-white font-semibold mb-1 text-sm">Marka</label>
           <div className="w-full flex items-center">
             <ReactSelect
               value={make ? { value: make, label: make } : null}
               options={options}
-              id="make"
+              id="marka"
               placeholder="Marka seçiniz"
               isSearchable={true}
               className="w-full min-w-[200px] z-20"
