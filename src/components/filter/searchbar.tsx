@@ -50,7 +50,7 @@ const SearchBar: FC = () => {
               value={make ? { value: make, label: make } : null}
               options={options}
               inputId="marka"
-              aria-labelledby="marka-label"
+              
               placeholder="Marka seçiniz"
               isSearchable={true}
               className="w-full min-w-[200px] z-20"
