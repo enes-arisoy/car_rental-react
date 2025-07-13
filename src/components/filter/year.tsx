@@ -19,11 +19,11 @@ const Year: FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col">
-      <label className="text-white font-semibold mb-2 text-sm">Yıl</label>
+      <label htmlFor="carYear" className="text-white font-semibold mb-2 text-sm">Yıl</label>
       <div className="flex items-center">
         <input
           type="number"
-          name="year"
+          name="carYear"
           className="border border-white/20 rounded-l-2xl px-4  w-32 h-[52px] text-white "
           placeholder="örn: 2025"
           onChange={(e) => setYear(e.target.value)}
@@ -33,7 +33,7 @@ const Year: FC = () => {
           type="submit"
           className="h-[52px] px-4  rounded-r-2xl border border-white/20  hover:bg-white/20 transition-all duration-300  hover:scale-105 cursor-pointer"
         >
-          <img src="search.svg" alt="" className="size-6" />
+          <img src="search.svg" alt="car-year-search-button" className="size-6" />
         </button>
       </div>
     </form>

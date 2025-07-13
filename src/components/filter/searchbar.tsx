@@ -39,11 +39,12 @@ const SearchBar: FC = () => {
     <form onSubmit={handleSubmit} className="searchbar flex gap-4 items-end">
       <div className="searchbar-item items-end">
         <div className="w-full flex flex-col gap-2">
-          <label className="text-white font-semibold mb-1 text-sm">Marka</label>
+          <label htmlFor="make" className="text-white font-semibold mb-1 text-sm">Marka</label>
           <div className="w-full flex items-center">
             <ReactSelect
               value={make ? { value: make, label: make } : null}
               options={options}
+              inputId="make"
               placeholder="Marka seçiniz"
               isSearchable={true}
               className="w-full min-w-[200px] z-20"
@@ -51,21 +52,22 @@ const SearchBar: FC = () => {
               onChange={(option) => setMake(option?.value as string)}
             />
             <button className="ml-2  p-2 glass-effect rounded-xl hover:bg-white/20 transition-all duration-300  hover:scale-105 cursor-pointer">
-              <img src="search.svg" alt="" className="size-6" />
+              <img src="search.svg" alt="car-make-button" className="size-6" />
             </button>
           </div>
         </div>
       </div>
 
       <div className="searchbar-item items-start flex flex-col">
-        <label className="text-white font-semibold mb-3 text-sm">Model</label>
+        <label htmlFor="model" className="text-white font-semibold mb-3 text-sm">Model</label>
         <div className="w-full flex items-center">
           <div className="flex-1 relative">
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-2">
-              <img src="model.png" alt="" className="size-10"/>
+              <img src="model.png" alt="car-model-png" className="size-10"/>
             </div>
             <input
               value={model || ""}
+              name="model"
               type="text"
               placeholder="Model yazınız"
               className="searchbar-input w-full"
@@ -73,7 +75,7 @@ const SearchBar: FC = () => {
             />
           </div>
           <button className="ml-2   p-2 glass-effect rounded-xl hover:bg-white/20 transition-all duration-300  hover:scale-105 cursor-pointer">
-            <img src="search.svg" alt="" className="size-6" />
+            <img src="search.svg" alt="model-search-button" className="size-6" />
           </button>
         </div>
       </div>

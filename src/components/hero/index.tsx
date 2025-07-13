@@ -9,7 +9,7 @@ const Hero: FC = () => {
         <motion.h1
           initial={{ translateY: -50, opacity: 0 }}
           animate={{ translateY: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2, type: "spring" }}
+          transition={{ duration: 0.5, delay: 0.1, type: "spring" }}
           className="hero-title"
         >
           Özgürlüğü Hisset, Yolculuğa Başla
@@ -17,7 +17,7 @@ const Hero: FC = () => {
         <motion.p
           initial={{ translateY: -50, opacity: 0 }}
           animate={{ translateY: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6, type: "spring" }}
+          transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
           className="hero-subtitle"
         >
           Altın standartta hizmetle unutulmaz bir yolculuğa hazır mısın? Araç
@@ -26,9 +26,9 @@ const Hero: FC = () => {
         </motion.p>
         <motion.div initial={{ translateY: -50, opacity: 0 }}
           animate={{ translateY: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8, type: "spring" }}
+          transition={{ duration: 0.5, delay: 0.4, type: "spring" }}
         >
-          <Button text="Arabaları Keşfet" designs="mt-10" />
+          <Button text="Arabaları Keşfet" name="keşfet" designs="mt-10" />
         </motion.div>
       </div>
 
@@ -36,12 +36,13 @@ const Hero: FC = () => {
         <motion.div
           initial={{ translateX: 200, scale: 0.5, opacity: 0 }}
           animate={{ translateX: 0, scale: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 1, type: "spring", bounce: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.6, type: "spring", bounce: 0.3 }}
           className="relative"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/30 to-accent/30 rounded-full blur-3xl -z-10 " />
           <img
             src="hero.png"
+            alt="hero-bmw-photo"
             className="object-contain xl:w-[600px] xl:h-[477.5px] drop-shadow-2xl"
           />
         </motion.div>

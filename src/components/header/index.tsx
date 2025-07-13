@@ -4,7 +4,7 @@ import Button from './../button/index';
 
 const Header: FC = () => {
   return (
-    <div className="w-full z-20 glass-dark border-white/10 border-x-0!">
+    <header className="w-full z-20 glass-dark border-white/10 border-x-0!">
       <div className="max-width flex-between padding-x padding-y">
         <Link to="/" className="flex items-center gap-3 ">
           <img
@@ -20,7 +20,7 @@ const Header: FC = () => {
         <Button text="Kaydol" name="kaydol"/>
         
       </div>
-    </div>
+    </header>
   );
 };
 

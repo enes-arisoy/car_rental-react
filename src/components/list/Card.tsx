@@ -47,6 +47,7 @@ const Card: FC<Props> = ({ car }) => {
           >
             <Button
               text="Daha Fazla"
+              name="daha fazla"
               designs="w-full text-white"
               fn={() => setModelOpen(true)}
             />

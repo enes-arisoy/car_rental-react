@@ -25,6 +25,7 @@ const Modal: FC<Props> = ({ isOpen, close, car }) => {
           >
             <button
               onClick={close}
+              name="close"
               className="car-details-close-btn cursor-pointer"
             >
               X
