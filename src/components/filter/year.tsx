@@ -24,6 +24,7 @@ const Year: FC = () => {
         <input
           type="number"
           name="carYear"
+          id="carYear"
           className="border border-white/20 rounded-l-2xl px-4  w-32 h-[52px] text-white "
           placeholder="örn: 2025"
           onChange={(e) => setYear(e.target.value)}

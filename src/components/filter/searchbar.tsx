@@ -44,7 +44,7 @@ const SearchBar: FC = () => {
             <ReactSelect
               value={make ? { value: make, label: make } : null}
               options={options}
-              inputId="make"
+              id="make"
               placeholder="Marka seçiniz"
               isSearchable={true}
               className="w-full min-w-[200px] z-20"
@@ -59,7 +59,7 @@ const SearchBar: FC = () => {
       </div>
 
       <div className="searchbar-item items-start flex flex-col">
-        <label htmlFor="model" className="text-white font-semibold mb-3 text-sm">Model</label>
+        <label htmlFor="input" className="text-white font-semibold mb-3 text-sm">Model</label>
         <div className="w-full flex items-center">
           <div className="flex-1 relative">
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-2">
@@ -68,6 +68,7 @@ const SearchBar: FC = () => {
             <input
               value={model || ""}
               name="model"
+              id="input"
               type="text"
               placeholder="Model yazınız"
               className="searchbar-input w-full"
